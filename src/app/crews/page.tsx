@@ -24,7 +24,13 @@ export default async function CrewsPage() {
 
     return (
         <main className="p-6">
-            <h1 className="text-2xl font-bold text-slate-900 mb-4">러닝 크루 모집</h1>
+            <div className="flex justify-between items-center mb-4">
+                <h1 className="text-2xl font-bold text-slate-900">러닝 크루 모집</h1>
+                <Link href="/crews/new" className="px-4 py-2 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition text-sm">
+                    새 크루 모집
+                </Link>
+            </div>
+            
             <div className="space-y-4">
                 {crews.map((crew) => (
                     <Link key={crew.id} href={`/crews/${crew.id}`} className="block p-4 border border-slate-200 rounded-xl bg-white shadow-sm">
